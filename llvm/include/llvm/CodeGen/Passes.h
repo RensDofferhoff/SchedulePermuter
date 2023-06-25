@@ -554,6 +554,14 @@ namespace llvm {
   /// When learning an eviction policy, extract score(reward) information,
   /// otherwise this does nothing
   FunctionPass *createRegAllocScoringPass();
+  
+    //Schedule Permuter
+  extern char &RALRUID;
+  FunctionPass *createLRURegisterAllocator();
+  FunctionPass *createLRURegisterAllocator(RegClassFilterFunc F);
+  extern char& PreEmitSchedulerID;
+  FunctionPass *createPreEmitSchedulerPass();
+  FunctionPass *createMachineInstrScheduleVerfPass();
 } // End llvm namespace
 
 #endif

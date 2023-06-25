@@ -600,6 +600,9 @@ void X86PassConfig::addPreEmitPass2() {
       return M->getFunction("objc_retainAutoreleasedReturnValue") ||
              M->getFunction("objc_unsafeClaimAutoreleasedReturnValue");
     }));
+    
+  addPass(createPreEmitSchedulerPass());
+  addPass(createMachineInstrScheduleVerfPass());
 }
 
 bool X86PassConfig::addPostFastRegAllocRewrite() {

@@ -26,6 +26,9 @@ if (DEFINED LLVM_HAVE_TF_AOT OR DEFINED LLVM_HAVE_TF_API)
 endif()
 
 add_llvm_component_library(LLVMCodeGen
+  InstrScheduleVerf.cpp
+  PreEmitScheduler.cpp
+  RegAllocLRU.cpp
   AggressiveAntiDepBreaker.cpp
   AllocationOrder.cpp
   Analysis.cpp

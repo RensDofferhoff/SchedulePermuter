@@ -463,6 +463,10 @@ void initializeWinEHPreparePass(PassRegistry&);
 void initializeWriteBitcodePassPass(PassRegistry&);
 void initializeWriteThinLTOBitcodePass(PassRegistry&);
 void initializeXRayInstrumentationPass(PassRegistry&);
+//Schedule Premuter
+void initializeRALRUPass(PassRegistry&);
+void initializeMachineInstrScheduleVerfPass(PassRegistry&);
+void initializePreEmitSchedulerPass(PassRegistry&);
 
 } // end namespace llvm
 
